@@ -137,6 +137,9 @@ class UsersTableViewManager:NSObject, UITableViewDelegate, UITableViewDataSource
     
     //MARK: - Class helpers
     private func hideBottomLoader() {
+        guard self.mainFeed.count > 0 else {
+            return
+        }
         DispatchQueue.main.async {
             let lastListIndexPath = IndexPath(row: self.mainFeed.count - 1, section: 0)
             self.tableView.scrollToRow(at: lastListIndexPath, at: .bottom, animated: true)
