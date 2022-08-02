@@ -134,13 +134,9 @@ class UserEntityManager {
         
         do {
             let rst = try contect.fetch(fetchRequest) as! [UserEntity]
-            print(rst)
             return rst
         } catch {
-            //TODO: error
             return []
         }
     }
-    
-    
 }
