@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoordinatesEntity" representedClassName="CoordinatesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="lat" optional="YES" attributeType="String"/>
+        <attribute name="lng" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="IDEntity" representedClassName="IDEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="postcode" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <relationship name="coordinates" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CoordinatesEntity"/>
+        <relationship name="street" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="StreetEntity"/>
+        <relationship name="timezone" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TimezoneEntity"/>
+    </entity>
+    <entity name="NameEntity" representedClassName="NameEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="first" optional="YES" attributeType="String"/>
+        <attribute name="last" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PictureEntity" representedClassName="PictureEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="large" optional="YES" attributeType="String"/>
+        <attribute name="medium" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="StreetEntity" representedClassName="StreetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TimezoneEntity" representedClassName="TimezoneEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="descript" optional="YES" attributeType="String"/>
+        <attribute name="offset" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cell" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="id" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="IDEntity"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="LocationEntity"/>
+        <relationship name="name" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NameEntity"/>
+        <relationship name="picture" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PictureEntity"/>
+    </entity>
+    <elements>
+        <element name="CoordinatesEntity" positionX="36" positionY="108" width="128" height="59"/>
+        <element name="IDEntity" positionX="54" positionY="135" width="128" height="59"/>
+        <element name="LocationEntity" positionX="27" positionY="99" width="128" height="134"/>
+        <element name="NameEntity" positionX="18" positionY="90" width="128" height="74"/>
+        <element name="PictureEntity" positionX="18" positionY="90" width="128" height="74"/>
+        <element name="StreetEntity" positionX="54" positionY="144" width="128" height="59"/>
+        <element name="TimezoneEntity" positionX="45" positionY="135" width="128" height="59"/>
+        <element name="UserEntity" positionX="-27" positionY="18" width="128" height="149"/>
+    </elements>
+</model>
